@@ -33,7 +33,7 @@ a:hover { text-decoration: underline; }
 .nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 14px 20px;
+  padding: 14px 0;
   display: flex;
   justify-content: flex-end;
   gap: 22px;
