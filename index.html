@@ -3,181 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ehsan Futuhi — AI researcher working on reinforcement learning, heuristic search, planning, and foundation model reasoning." />
-  <title>Ehsan Futuhi | AI Researcher</title>
+  <title>Ehsan Futuhi</title>
+  <meta name="description" content="Ehsan Futuhi — AI researcher working on reinforcement learning, heuristic search, LLM reasoning, planning, and time-series forecasting." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav">
-      <a class="logo" href="#home">Ehsan Futuhi</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#about" class="active">about</a>
+      <a href="#news">news</a>
+      <a href="#publications">publications</a>
+      <a href="#projects">projects</a>
+      <a href="#service">service</a>
+      <a href="assets/Ehsan_Futuhi_CV.pdf" target="_blank" rel="noopener">cv</a>
+      <a href="https://scholar.google.com/" target="_blank" rel="noopener">scholar</a>
+      <a href="https://github.com/ehsan-fmb" target="_blank" rel="noopener">github</a>
+      <a href="https://www.linkedin.com/in/ehsan-futuhi" target="_blank" rel="noopener">linkedin</a>
     </nav>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-text">
-        <p class="eyebrow">AI Researcher · Planning · Reinforcement Learning · Heuristic Search</p>
-        <h1>Ehsan Futuhi</h1>
-        <p class="lead">
-          I work on artificial intelligence methods that combine learning, search, and planning.
-          My research focuses on reinforcement learning, admissible heuristics, large language model reasoning,
-          and scalable CPU–GPU search algorithms.
+  <main class="container">
+    <section id="about" class="hero">
+      <div class="bio">
+        <h1><strong>Ehsan</strong> Futuhi</h1>
+        <p>
+          I am an AI researcher working at the intersection of <strong>reinforcement learning</strong>,
+          <strong>heuristic search</strong>, and <strong>foundation-model reasoning</strong>. I received my
+          M.Sc. in Computing Science from the University of Alberta, where my research focused on
+          improving the sample efficiency of reinforcement-learning algorithms using search and subgoal discovery.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="Ehsan_Futuhi_CV.pdf" target="_blank" rel="noopener">Download CV</a>
-          <a class="button" href="https://github.com/ehsan-fmb" target="_blank" rel="noopener">GitHub</a>
-          <a class="button" href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+        <p>
+          I am currently a Data Scientist at MedWatch Technologies, working on AI methods for
+          non-invasive blood glucose monitoring. I am also a part-time Research Assistant at the Moving AI Lab,
+          where I study the reasoning capabilities of large language models in planning tasks.
+        </p>
+        <p>
+          My broader research interests include admissible heuristic learning for A*, CPU-GPU accelerated
+          heuristic search, LLM/VLM reasoning for planning, sparse-reward reinforcement learning,
+          robotics, and time-series forecasting from biosensor signals.
+        </p>
+        <p class="contact-line">
+          <a href="mailto:futuhiehsan@gmail.com">futuhiehsan@gmail.com</a>
+        </p>
+      </div>
+
+      <aside class="profile-card" aria-label="Profile photo and links">
+        <img src="assets/profile-placeholder.svg" alt="Profile photo placeholder" class="profile-photo" />
+        <div class="profile-links">
+          <a href="assets/Ehsan_Futuhi_CV.pdf" target="_blank" rel="noopener">CV</a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://github.com/ehsan-fmb" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/ehsan-futuhi" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </aside>
+    </section>
+
+    <section id="news" class="section">
+      <h2>news</h2>
+      <ul class="news-list">
+        <li><span>2026</span> Paper accepted to ICLR: <em>Learning Admissible Heuristics for A*: Theory and Practice</em>.</li>
+        <li><span>2026</span> Paper accepted as an oral presentation at AAAI: <em>A Parallel CPU-GPU Framework for Batching Heuristic Operations in Depth-First Heuristic Search</em>.</li>
+        <li><span>2026</span> Started part-time research at the Moving AI Lab on LLM reasoning for planning.</li>
+        <li><span>2025</span> ETGL-DDPG paper published in Transactions on Machine Learning Research.</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="section publications">
+      <h2>publications</h2>
+      <p class="note">Representative publications. Add PDF, code, website, and arXiv/OpenReview links when available.</p>
+
+      <article class="publication">
+        <div class="pub-info">
+          <h3>Learning Admissible Heuristics for A*: Theory and Practice</h3>
+          <p><strong>Ehsan Futuhi</strong>, Nathan R. Sturtevant</p>
+          <p><em>International Conference on Learning Representations (ICLR), 2026</em></p>
+          <div class="pub-links">
+            <a href="#">PDF</a><a href="#">Code</a><a href="#">Project</a><a href="#">BibTeX</a>
+          </div>
+        </div>
+        <div class="pub-year">2026</div>
+      </article>
+
+      <article class="publication">
+        <div class="pub-info">
+          <h3>A Parallel CPU-GPU Framework for Batching Heuristic Operations in Depth-First Heuristic Search</h3>
+          <p><strong>Ehsan Futuhi</strong>, Nathan R. Sturtevant</p>
+          <p><em>AAAI Conference on Artificial Intelligence (AAAI), 2026 — Oral Presentation</em></p>
+          <div class="pub-links">
+            <a href="#">PDF</a><a href="#">Code</a><a href="#">Project</a><a href="#">BibTeX</a>
+          </div>
+        </div>
+        <div class="pub-year">2026</div>
+      </article>
+
+      <article class="publication">
+        <div class="pub-info">
+          <h3>ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control</h3>
+          <p><strong>Ehsan Futuhi</strong>, Shayan Karimi, Chao Gao, Martin Müller</p>
+          <p><em>Transactions on Machine Learning Research (TMLR), 2025</em></p>
+          <div class="pub-links">
+            <a href="#">PDF</a><a href="#">Code</a><a href="#">BibTeX</a>
+          </div>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
+
+      <article class="publication">
+        <div class="pub-info">
+          <h3>Improving Deep Deterministic Policy Gradient for Sparse Reward and Goal-Conditioned Continuous Control</h3>
+          <p><strong>Ehsan Futuhi</strong></p>
+          <p><em>Master’s Thesis, University of Alberta, 2024</em></p>
+          <div class="pub-links">
+            <a href="#">PDF</a><a href="#">BibTeX</a>
+          </div>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+
+      <article class="publication">
+        <div class="pub-info">
+          <h3>On using Monte-Carlo Tree Search to Solve Puzzles</h3>
+          <p>Mohammad Sina Kiarostami, Mohammadreza Daneshvaramoli, Saleh Khalaj Monfared, Aku Visuri, Helia Karisani, Simo Hosio, Hamed Khashehchi, <strong>Ehsan Futuhi</strong>, Dara Rahmati, Saeid Gorgin</p>
+          <p><em>International Conference on Computer Technology Applications, 2021</em></p>
+          <div class="pub-links">
+            <a href="#">PDF</a><a href="#">BibTeX</a>
+          </div>
+        </div>
+        <div class="pub-year">2021</div>
+      </article>
+
+      <article class="publication">
+        <div class="pub-info">
+          <h3>Solving Nurikabe with Monte-Carlo Tree Search</h3>
+          <p><strong>Ehsan Futuhi</strong>, Shayan Karimi</p>
+          <p><em>International Conference on Computational Intelligence and Applications (ICCIA), 2020</em></p>
+          <div class="pub-links">
+            <a href="#">PDF</a><a href="#">BibTeX</a>
+          </div>
+        </div>
+        <div class="pub-year">2020</div>
+      </article>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>selected projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>LLM Reasoning for Planning</h3>
+          <p>Benchmarking LLMs on planning tasks, developing environments, prompting methods, and fine-tuning baselines.</p>
+        </div>
+        <div class="project-card">
+          <h3>Learning Admissible Heuristics</h3>
+          <p>Learning admissible models for A* search with theoretical and empirical analysis on domains such as Rubik’s Cube.</p>
+        </div>
+        <div class="project-card">
+          <h3>Batch IDA*</h3>
+          <p>CPU-GPU accelerated framework for large-scale depth-first heuristic search with batched heuristic operations.</p>
+        </div>
+        <div class="project-card">
+          <h3>ETGL-DDPG</h3>
+          <p>Improved DDPG method for sparse-reward continuous-control problems in MuJoCo and Meta-World benchmarks.</p>
         </div>
       </div>
-      <div class="hero-card">
-        <h2>Research interests</h2>
+    </section>
+
+    <section id="service" class="section two-column">
+      <div>
+        <h2>service</h2>
         <ul>
-          <li>AI planning and heuristic search</li>
-          <li>Reinforcement learning for sparse-reward tasks</li>
-          <li>LLM/VLM reasoning and planning</li>
-          <li>Monte Carlo Tree Search</li>
-          <li>Time-series forecasting for biosensor signals</li>
+          <li>Reviewer, ICLR 2025–2026</li>
+          <li>Reviewer, AAAI 2026</li>
+          <li>Reviewer, ICAPS 2025</li>
+          <li>Reviewer, UAI 2024</li>
         </ul>
       </div>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>
-        I am an AI researcher with an M.Sc. in Computing Science from the University of Alberta,
-        where my research focused on reinforcement learning and search. I am currently working as a
-        Data Scientist at MedWatch Technologies on non-invasive blood glucose monitoring using AI, and
-        as a part-time Research Assistant at the Moving AI Lab, where I study the reasoning capabilities
-        of large language models in planning tasks.
-      </p>
-      <p>
-        Broadly, I am interested in building intelligent systems that reason, plan, and generalize. My work
-        connects classical search and planning algorithms with modern machine learning, including deep
-        reinforcement learning, admissible heuristic learning, foundation-model reasoning, and efficient
-        CPU–GPU implementations for large-scale search.
-      </p>
-    </section>
-
-    <section id="research" class="section alt">
-      <h2>Research themes</h2>
-      <div class="grid cards">
-        <article class="card">
-          <h3>Learning admissible heuristics</h3>
-          <p>Designing learning objectives and theoretical tools for heuristic functions that support efficient and reliable A* search.</p>
-        </article>
-        <article class="card">
-          <h3>LLM reasoning for planning</h3>
-          <p>Evaluating and improving how large language models solve structured planning problems through prompting and fine-tuning.</p>
-        </article>
-        <article class="card">
-          <h3>Batch heuristic search</h3>
-          <p>Developing parallel CPU–GPU frameworks for batching heuristic operations in depth-first heuristic search.</p>
-        </article>
-        <article class="card">
-          <h3>Sparse-reward reinforcement learning</h3>
-          <p>Improving exploration, replay, and learning efficiency in sparse-reward continuous-control environments.</p>
-        </article>
+      <div>
+        <h2>skills</h2>
+        <ul>
+          <li>Python, JAX, Java, C/C++</li>
+          <li>PyTorch/LibTorch, TensorFlow, PDDL</li>
+          <li>GCP, AWS, Azure, Docker, Kubernetes</li>
+        </ul>
       </div>
-    </section>
-
-    <section id="publications" class="section">
-      <h2>Selected publications</h2>
-      <ol class="pub-list">
-        <li>
-          <strong>Learning Admissible Heuristics for A*: Theory and Practice</strong><br />
-          Ehsan Futuhi, Nathan R. Sturtevant. ICLR, 2026.
-        </li>
-        <li>
-          <strong>A Parallel CPU-GPU Framework for Batching Heuristic Operations in Depth-First Heuristic Search</strong><br />
-          Ehsan Futuhi, Nathan R. Sturtevant. AAAI, 2026. Oral Presentation.
-        </li>
-        <li>
-          <strong>ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control</strong><br />
-          Ehsan Futuhi, Shayan Karimi, Chao Gao, Martin Müller. TMLR, 2025.
-        </li>
-        <li>
-          <strong>Improving Deep Deterministic Policy Gradient for Sparse Reward and Goal-Conditioned Continuous Control</strong><br />
-          Ehsan Futuhi. Master's Thesis, University of Alberta, 2024.
-        </li>
-        <li>
-          <strong>Solving Nurikabe with Monte-Carlo Tree Search</strong><br />
-          Ehsan Futuhi, Shayan Karimi. ICCIA, 2020.
-        </li>
-      </ol>
-    </section>
-
-    <section id="projects" class="section alt">
-      <h2>Selected projects</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="year">2026</span>
-          <h3>Reasoning capabilities of LLMs in planning tasks</h3>
-          <p>Developed benchmarking environments, prompting strategies, and fine-tuning baselines for LLM planning.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="year">2025</span>
-          <h3>Learning admissible heuristics</h3>
-          <p>Developed a novel loss function and sample-complexity analysis for admissible heuristic learning.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="year">2025</span>
-          <h3>ETGL-DDPG</h3>
-          <p>Designed exploration and replay-buffer mechanisms for sparse-reward continuous-control tasks.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="year">2024</span>
-          <h3>Batch IDA*</h3>
-          <p>Implemented CPU–GPU parallelism for large-scale heuristic search with ML-driven heuristics.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="year">2023</span>
-          <h3>Safe-MCTS</h3>
-          <p>Studied MCTS for stochastic constrained MDPs using safety critics and policy priors.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <h2>Experience</h2>
-      <div class="experience-list">
-        <article>
-          <h3>Research Assistant, Moving AI Lab</h3>
-          <p>2026–present · Evaluating reasoning capabilities of LLMs in planning.</p>
-        </article>
-        <article>
-          <h3>Data Scientist, MedWatch Technologies</h3>
-          <p>2025–present · Non-invasive blood glucose monitoring using AI.</p>
-        </article>
-        <article>
-          <h3>Research Assistant, Moving AI Lab</h3>
-          <p>2024–2025 · Designing admissible heuristics for single-agent search algorithms.</p>
-        </article>
-        <article>
-          <h3>Graduate Research Fellow, University of Alberta</h3>
-          <p>2021–2024 · Improving sample efficiency of reinforcement learning algorithms using search and subgoals.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:futuhiehsan@gmail.com">futuhiehsan@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/ehsan-fmb" target="_blank" rel="noopener">ehsan-fmb</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/ehsan-futuhi" target="_blank" rel="noopener">ehsan-futuhi</a></p>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Ehsan Futuhi. Built with GitHub Pages.</p>
+    <p>© <span id="year"></span> Ehsan Futuhi</p>
   </footer>
 
   <script src="script.js"></script>
