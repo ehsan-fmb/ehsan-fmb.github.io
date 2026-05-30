@@ -16,6 +16,12 @@ const BIBTEX = {
   pages={36919--36927},
   year={2026}
 }`,
+  futuhi2025etgl: `@article{futuhi2025etgl,
+  title={ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control},
+  author={Futuhi, Ehsan and Karimi, Shayan and Gao, Chao and M{\\"u}ller, Martin},
+  journal={Transactions on Machine Learning Research},
+  year={2025}
+}`,
 };
 
 const COPY_LINKS = {
