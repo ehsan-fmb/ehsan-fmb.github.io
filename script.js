@@ -114,22 +114,21 @@ document.querySelectorAll('.copy-link').forEach((link) => {
 (function initNavHighlight() {
   const navLinks = document.querySelectorAll('.nav a');
   const sections = [...document.querySelectorAll('main section[id]')];
+  const serviceBlock = document.getElementById('service');
 
   function updateActiveNav() {
     const headerOffset = 80;
     const scrollPos = window.scrollY + headerOffset;
-    const atBottom =
-      window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5;
     let currentId = sections[0]?.id || '';
 
-    if (atBottom) {
-      currentId = sections[sections.length - 1].id;
-    } else {
-      for (const section of sections) {
-        if (section.offsetTop <= scrollPos) {
-          currentId = section.id;
-        }
+    for (const section of sections) {
+      if (section.offsetTop <= scrollPos) {
+        currentId = section.id;
       }
+    }
+
+    if (serviceBlock && scrollPos >= serviceBlock.offsetTop - 10) {
+      currentId = window.location.hash === '#skills' ? 'skills' : 'service';
     }
 
     navLinks.forEach((link) => {
