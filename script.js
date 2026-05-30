@@ -110,3 +110,26 @@ document.querySelectorAll('.copy-link').forEach((link) => {
     await copyText(url, 'Presentation link copied to clipboard');
   });
 });
+
+(function initNavHighlight() {
+  const navLinks = document.querySelectorAll('.nav a');
+  const sections = [...document.querySelectorAll('main section[id]')];
+
+  function updateActiveNav() {
+    const headerOffset = 80;
+    let currentId = sections[0]?.id || '';
+
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= headerOffset) {
+        currentId = section.id;
+      }
+    }
+
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+})();
