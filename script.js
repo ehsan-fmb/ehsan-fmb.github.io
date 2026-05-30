@@ -117,11 +117,18 @@ document.querySelectorAll('.copy-link').forEach((link) => {
 
   function updateActiveNav() {
     const headerOffset = 80;
+    const scrollPos = window.scrollY + headerOffset;
+    const atBottom =
+      window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5;
     let currentId = sections[0]?.id || '';
 
-    for (const section of sections) {
-      if (section.getBoundingClientRect().top <= headerOffset) {
-        currentId = section.id;
+    if (atBottom) {
+      currentId = sections[sections.length - 1].id;
+    } else {
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPos) {
+          currentId = section.id;
+        }
       }
     }
 
@@ -131,5 +138,6 @@ document.querySelectorAll('.copy-link').forEach((link) => {
   }
 
   window.addEventListener('scroll', updateActiveNav, { passive: true });
+  window.addEventListener('hashchange', updateActiveNav);
   updateActiveNav();
 })();

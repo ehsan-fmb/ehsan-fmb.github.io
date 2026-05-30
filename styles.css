@@ -87,6 +87,7 @@ h1 strong { font-weight: 750; }
 }
 
 .section { margin-top: 42px; }
+section[id] { scroll-margin-top: 80px; }
 h2 {
   font-size: 32px;
   font-weight: 400;
