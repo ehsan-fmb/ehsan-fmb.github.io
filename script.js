@@ -1,32 +1,14 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const BIBTEX = {
-  futuhi2026learning: `@inproceedings{futuhi2026learning,
-  title={Learning Admissible Heuristics for A*: Theory and Practice},
-  author={Futuhi, Ehsan and Sturtevant, Nathan R.},
-  booktitle={Proceedings of the Fourteenth International Conference on Learning Representations (ICLR)},
-  year={2026},
-}`,
-  futuhi2026parallel: `@inproceedings{futuhi2026parallel,
-  title={A Parallel CPU-GPU Framework for Batching Heuristic Operations in Depth-First Heuristic Search},
-  author={Futuhi, Ehsan and Sturtevant, Nathan R},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  volume={40},
-  number={43},
-  pages={36919--36927},
-  year={2026}
-}`,
-  futuhi2025etgl: `@article{futuhi2025etgl,
-  title={ETGL-DDPG: A Deep Deterministic Policy Gradient Algorithm for Sparse Reward Continuous Control},
-  author={Futuhi, Ehsan and Karimi, Shayan and Gao, Chao and M{\\"u}ller, Martin},
-  journal={Transactions on Machine Learning Research},
-  year={2025}
-}`,
-};
-
 const COPY_LINKS = {
   futuhi2026parallel: 'https://www.youtube.com/watch?v=naV-qD9pCok&t=1s',
 };
+
+function getBibEntry(key) {
+  const template = document.getElementById(`bib-${key}`);
+  if (!template) return null;
+  return template.content.textContent.trim();
+}
 
 function showCopyToast(message) {
   let toast = document.getElementById('copy-toast');
@@ -111,7 +93,7 @@ function hideBibModal() {
 document.querySelectorAll('.bibtex-link').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
-    const bib = BIBTEX[link.dataset.bib];
+    const bib = getBibEntry(link.dataset.bib);
     if (!bib) return;
     showBibModal(bib);
   });
