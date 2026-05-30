@@ -36,21 +36,78 @@ function showCopyToast(message) {
   showCopyToast._timer = setTimeout(() => toast.classList.remove('visible'), 2000);
 }
 
+function copyToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.opacity = '0';
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+  return Promise.resolve();
+}
+
 async function copyText(text, toastMessage) {
   try {
-    await navigator.clipboard.writeText(text);
+    await copyToClipboard(text);
     showCopyToast(toastMessage);
   } catch {
-    window.prompt('Copy to clipboard:', text);
+    showBibModal(text);
   }
 }
 
+function showBibModal(bib) {
+  let modal = document.getElementById('bib-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'bib-modal';
+    modal.className = 'bib-modal';
+    modal.innerHTML = `
+      <div class="bib-modal-content" role="dialog" aria-labelledby="bib-modal-title" aria-modal="true">
+        <div class="bib-modal-header">
+          <h3 id="bib-modal-title">BibTeX</h3>
+          <button type="button" class="bib-modal-close" aria-label="Close">×</button>
+        </div>
+        <pre class="bib-modal-text"></pre>
+        <button type="button" class="bib-modal-copy">Copy to clipboard</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    modal.querySelector('.bib-modal-close').addEventListener('click', hideBibModal);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) hideBibModal();
+    });
+    modal.querySelector('.bib-modal-copy').addEventListener('click', async () => {
+      const text = modal.querySelector('.bib-modal-text').textContent;
+      await copyText(text, 'BibTeX copied to clipboard');
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') hideBibModal();
+    });
+  }
+
+  modal.querySelector('.bib-modal-text').textContent = bib;
+  modal.classList.add('visible');
+}
+
+function hideBibModal() {
+  const modal = document.getElementById('bib-modal');
+  if (modal) modal.classList.remove('visible');
+}
+
 document.querySelectorAll('.bibtex-link').forEach((link) => {
-  link.addEventListener('click', async (e) => {
+  link.addEventListener('click', (e) => {
     e.preventDefault();
     const bib = BIBTEX[link.dataset.bib];
     if (!bib) return;
-    await copyText(bib, 'BibTeX copied to clipboard');
+    showBibModal(bib);
   });
 });
 
