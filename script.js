@@ -2,7 +2,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 const COPY_LINKS = {
   futuhi2026parallel: 'https://www.youtube.com/watch?v=naV-qD9pCok&t=1s',
-  futuhi2026planning: 'https://www.youtube.com/watch?v=Fah7rgyvUEs',
 };
 
 function getBibEntry(key) {
